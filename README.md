@@ -1,9 +1,18 @@
 # KMS-inventory-analysis--Capstone-project
+
 A project required for a certification in Data Analysis after three months of learning with the Incubator Hub
-### Project Topic: Kultra Mega Store (KMS) Sales and shipping Performance Analysis
 
-## Project Overview: This is a comprehensive analysis of the inventory data set from the Abuja division of KMS leveraging SQL queries to extract valuable insights. The goal is to provide a data-driven overview of performance across various dimensions, including product categories, regions, customer segments, and shipping logistics, culminating in actionable recommendations for management and also provide a clear understanding of KMS's operational and customer landscape
+## Project Topic: Kultra Mega Store (KMS) Sales and shipping Performance Analysis
 
+### Project Overview
+
+This is a comprehensive analysis of the inventory data set from the Abuja division of KMS leveraging SQL queries to extract valuable insights. The goal is to provide a data-driven overview of performance across various dimensions, including product categories, regions, customer segments, and shipping logistics, culminating in actionable recommendations for management and also provide a clear understanding of KMS's operational and customer landscape.
+
+### Tool Used
+ - SQL server
+### Data Cleaning and Preparation
+
+I loaded the data into the import wizard, reviewed the column mappings and ensure the detected data types were correct for the data and chose row ID as the primary key because it uniquely identified each individual item
 
 
 ``` SQL
@@ -15,7 +24,7 @@ select * from [dbo].[Order_Status]
 alter table [KMS Sales Data]
 alter column Product_Base_Margin decimal (10,3) not null
 
-1. -------Which product category had the highest sales?
+1. -------Which product category had the highest sales? **Technology: 5984248.409**
 SELECT TOP 1 Product_Category, SUM(Sales) AS TotalSales
 FROM [KMS Sales Data]
 GROUP BY Product_Category 
