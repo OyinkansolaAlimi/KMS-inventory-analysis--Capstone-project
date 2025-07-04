@@ -55,18 +55,27 @@ SELECT SUM(Sales) AS Total_Appliances_Sales_In_Ontario
   from [KMS Sales Data]
   group by Customer_Name
   order by Totalsales asc
+
+```
+**BOTTOM 10 CUSTOMER NAMES**
  - Jeremy Farry 85.720
-Natalie DeCherney 125.900
-Nicole Fjeld 153.030
-Katrina Edelman 180.760
-Dorothy Dickinson 198.080
-Christine Kargatis 293.220
-Eric Murdock 343.328
-Chris McAfee 350.180
-Peter McVee 364.240
-Rick Huthwaite	415.820
+ - Natalie DeCherney 125.900
+ -  Nicole Fjeld 153.030
+ -   Katrina Edelman 180.760
+ - Dorothy Dickinson 198.080
+ -  Christine Kargatis 293.220
+ -  Eric Murdock 343.328
+ -   Chris McAfee 350.180
+ -    Peter McVee 364.240
+ -    Rick Huthwaite	415.820
 
+   ##### ADVISE TO MANAGEMENT
+ - **Improved Customer Service**: Ensure these customers receive excellent customer service. Addressing any issues promptly and effectively can turn a negative experience into a positive one and encourage future purchases.
+ - **Feedback and Needs Assessment**: Directly reach out to these customers (if feasible) to gather feedback on their experience and understand their unmet needs. This insight can help in developing new offerings or improving existing ones.
+ - **Product/Service Awareness**: Some customers might not be aware of the full range of KMS's products or services. Educate them about offerings that could be beneficial to them
+ - **Re-engagement Campaigns**: Implement campaigns to re-engage dormant or low-spending customers. This could involve personalized emails, special offers for their next purchase, or surveys to understand their reasons for low engagement.
 
+``` SQL
   5.----KMS incurred the most shipping cost using which shipping method?= DELIVERY TRUCK; 51144.540
   SELECT TOP 1 "Ship_Mode", SUM("Shipping_Cost") AS TotalShippingCost
 FROM [KMS Sales Data]
@@ -125,18 +134,21 @@ FROM [KMS Sales Data] s
 JOIN [dbo].[Order_Status] o
 ON s.Order_ID = o.Order_ID
 WHERE o.Status = 'Returned'
-Aaron Bergman	 Corporate	 Returned
-Aaron Hawkins	 Home Office	Returned
-Adam Bellavance Small Business	  Returned
-Adrian Barton Small Business	Returned
-Alan Hwang Corporate	      Returned
-Alan Hwang	Small Business	Returned
-Alejandro Grove Consumer	Returned
-Alejandro Grove	Corporate	Returned
-Alejandro Savely Corporate    Returned
-Aleksandra Gannaway Corporate	Returned
 
+```
 
+ - Aaron Bergman	 Corporate	 Returned
+ - Aaron Hawkins	 Home Office	Returned
+ - Adam Bellavance Small Business	  Returned
+ - Adrian Barton Small Business	Returned
+ - Alan Hwang Corporate	      Returned
+ - Alan Hwang	Small Business	Returned
+ - Alejandro Grove Consumer	Returned
+ - Alejandro Grove	Corporate	Returned
+ - Alejandro Savely Corporate    Returned
+ - Aleksandra Gannaway Corporate	Returned
+
+``` SQL
 11----If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer = NO
 
 select Order_Priority, Ship_mode,
@@ -147,8 +159,8 @@ from [KMS Sales Data]
 group by Order_Priority, Ship_Mode
 order by Order_Priority, Ship_Mode desc
 
-
 ```
+
 **QUESTION 11 - ANSWER**
 | ORDER PRIORITY |SHIP MODE| ORDER COUNT | SHIPPING COST | AVG SHIPPING DAY |
 |---------------|---------|---------------|--------------|------------------|
@@ -163,14 +175,15 @@ order by Order_Priority, Ship_Mode desc
 | Low | Delivery Truck |	249 |	1330969.290 |	3 |
 | Medium |	Regular Air |	1219 |	1293489.620 |	1 |
 | Medium |	Express Air |	201 |	247151.920 |	1 |
-| Medium	Delivery Truck |	205 |	976998.950 |	1 |
-| Not Specified |	Regular Air |	1270	1264964.450 |	1 |
-| Not Specified |	Express Air | 177	187462.710 |	1 |
+| Medium |	Delivery Truck |	205 |	976998.950 |	1 |
+| Not Specified |	Regular Air |	1270 |	1264964.450 |	1 |
+| Not Specified |	Express Air | 177 |	187462.710 |	1 |
 | Not Specified |	Delivery Truck |	210 |	1065046.320 |	1 |
 ---
-The review of shipping costs and order priority revealed inefficiencies. High priority orders were sometimes shipped via slower, cheaper methods like delivery trucks while low priority orders occasionally used the more expensive express air service. This inconsistency suggests lack of alignment between shipping strategies and order urgency, leading to unnecessary order costs.
-Delivery Truck is the most expensive per item shipped, not the most economical. Contrary to the premise, the Delivery Truck method actually has a significantly higher average shipping cost compared to Express Air and Regular Air This suggests that Delivery Truck is not the most economical shipping method from a per-item cost perspective, purely based on the Shipping Cost column, it's the most expensive option.
-Regular Air is the most economical. Looking at the data, Regular Air consistently has the lowest average shipping cost, even slightly lower than Express Air.
+**The review of shipping costs and order priority revealed inefficiencies. High priority orders were sometimes shipped via slower, cheaper methods like delivery trucks while low priority orders occasionally used the more expensive express air service. This inconsistency suggests lack of alignment between shipping strategies and order urgency, leading to unnecessary order costs**.
+
+**Delivery Truck is the most expensive per item shipped, not the most economical. Contrary to the premise, the Delivery Truck method actually has a significantly higher average shipping cost compared to Express Air and Regular Air This suggests that Delivery Truck is not the most economical shipping method from a per-item cost perspective, purely based on the Shipping Cost column, it's the most expensive option.
+Regular Air is the most economical. Looking at the data, Regular Air consistently has the lowest average shipping cost, even slightly lower than Express Air**.
 
 ## 🔍 Findings and Interpretation
  - Product Performance; Identifying Revenue Drivers
@@ -202,3 +215,4 @@ Based on this analysis, KMS management should consider the following actions:
  - High-Value Customer Focus: Identifying and nurturing high-value customers through personalized strategies is essential for maximizing customer lifetime value and fostering loyalty.
  - Shipping Cost Optimization Needed: The high average cost of Delivery Truck shipments requires immediate investigation. Additionally, the current allocation of shipping methods for high-priority orders may not align with desired speed and efficiency.
 
+---
