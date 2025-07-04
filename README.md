@@ -1,5 +1,9 @@
 # KMS-inventory-analysis--Capstone-project
 A project required for a certification in Data Analysis after three months of learning with the Incubator Hub
+### Project Topic: Kultra Mega Store (KMS) Sales and shipping Performance Analysis
+
+## Project Overview: This is a comprehensive analysis of the inventory data set from the Abuja division of KMS leveraging SQL queries to extract valuable insights. The goal is to provide a data-driven overview of performance across various dimensions, including product categories, regions, customer segments, and shipping logistics, culminating in actionable recommendations for management and also provide a clear understanding of KMS's operational and customer landscape
+
 
 
 ``` SQL
