@@ -1,12 +1,12 @@
-# KMS-inventory-analysis--Capstone-project
+# 🛒 KMS-inventory-analysis--Capstone-project
 
 A project required for a certification in Data Analysis after three months of learning with the Incubator Hub
 
-## Project Topic: Kultra Mega Store (KMS) Sales and shipping Performance Analysis
+## 📌 Project Title
+**Kultra Mega Store (KMS) Sales and shipping Performance Analysis**
 
-### Project Overview
-
-This is a comprehensive analysis of the inventory data set from the Abuja division of KMS leveraging SQL queries to extract valuable insights. The goal is to provide a data-driven overview of performance across various dimensions, including product categories, regions, customer segments, and shipping logistics, culminating in actionable recommendations for management and also provide a clear understanding of KMS's operational and customer landscape.
+## 📂 Project Overview
+This is a comprehensive analysis of the inventory data set from the Abuja division of KMS leveraging **SQL Server** to extract valuable insights. The goal is to provide a data-driven overview of performance across various dimensions, including product categories, regions, customer segments, and shipping logistics, culminating in actionable recommendations for management and also provide a clear understanding of KMS's operational and customer landscape.
 
 ### Tool Used
  - SQL server
@@ -24,25 +24,25 @@ select * from [dbo].[Order_Status]
 alter table [KMS Sales Data]
 alter column Product_Base_Margin decimal (10,3) not null
 
-1. -------Which product category had the highest sales? **Technology: 5984248.409**
+1. -------Which product category had the highest sales? Technology: 984248.409
 SELECT TOP 1 Product_Category, SUM(Sales) AS TotalSales
 FROM [KMS Sales Data]
 GROUP BY Product_Category 
 ORDER BY TotalSales desc
 
-2.-------What are the Top 3 and Bottom 3 regions in terms of sales? 
---------TOP 3 REGIONS
+2.-------What are the Top 3 and Bottom 3 regions in terms of sales?
+--------TOP 3 REGIONS =  WEST; 3547958.331, ONTARIO; 3019144.917 ,PRIARIE; 2773571.870
 SELECT TOP 3 Region, SUM(Sales) AS TotalSales
 FROM [KMS Sales Data]
 GROUP BY Region
 ORDER BY TotalSales DESC 
- -------BOTTOM 3 REGIONS
+ -------BOTTOM 3 REGIONS = Nunavut; 106293.386 , Northwest Territories; 766752.169 , Yukon; 971448.733
  SELECT TOP 3 Region, SUM(Sales) AS TotalSales
 FROM [KMS Sales Data]
 GROUP BY Region
 ORDER BY TotalSales ASC
 
-3.------What were the total sales of appliances in Ontario?
+3.------What were the total sales of appliances in Ontario? = 202346.840
 SELECT SUM(Sales) AS Total_Appliances_Sales_In_Ontario
      FROM [KMS Sales Data]
  WHERE Product_Sub_Category = 'Appliances'
@@ -56,9 +56,7 @@ SELECT SUM(Sales) AS Total_Appliances_Sales_In_Ontario
   group by Customer_Name
   order by Totalsales asc
 
-  select * from [KMS Sales Data]
-
-  5.----KMS incurred the most shipping cost using which shipping method? 
+  5.----KMS incurred the most shipping cost using which shipping method?= DELIVERY TRUCK; 51144.540
   SELECT TOP 1 "Ship_Mode", SUM("Shipping_Cost") AS TotalShippingCost
 FROM [KMS Sales Data]
 GROUP BY Ship_Mode
@@ -84,15 +82,15 @@ WHERE Customer_Name = 'Roy Skaria'
 GROUP BY Product_Category
 ORDER BY Products_Purchased DESC
 
-7.---Which small business customer had the highest sales? 
+7.---Which small business customer had the highest sales? = Dennis kane 75967.591
       SELECT TOP 1 Customer_Name, SUM(Sales) AS TotalSales
       FROM [KMS Sales Data]
       WHERE Customer_Segment = 'Small Business'
      GROUP BY Customer_Name
     ORDER BY TotalSales DESC
 
-8.--Which Corporate Customer placed the most number of orders in 2009 – 2012? 
-    SELECT  top 1 Customer_Name, COUNT(DISTINCT Order_id) AS Orders_placed
+8.--Which Corporate Customer placed the most number of orders in 2009 – 2012? = Adam Hart, 19 orders
+    SELECT  top 1 Customer_Name, COUNT(DISTINCT Order_Quantity) AS Orders_placed
 FROM [KMS Sales Data]
 WHERE Customer_Segment = 'Corporate'
 and year (Order_date) 
@@ -100,7 +98,7 @@ and year (Order_date)
 GROUP BY Customer_Name
 ORDER BY Orders_placed DESC
 
-9.----Which consumer customer was the most profitable one? 
+9.----Which consumer customer was the most profitable one? = Emily phan 34005.440
 SELECT TOP 1 Customer_Name, SUM(Profit) AS Total_Profit
 FROM [KMS Sales Data]
 WHERE Customer_Segment = 'Consumer'
@@ -134,3 +132,4 @@ group by Order_Priority, Ship_Mode
 order by Order_Priority, avgshippingcost desc
 
 ```
+
