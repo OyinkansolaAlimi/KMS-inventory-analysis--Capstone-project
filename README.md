@@ -133,3 +133,33 @@ order by Order_Priority, avgshippingcost desc
 
 ```
 
+## 🔍 Findings and Interpretation
+ - Product Performance; Identifying Revenue Drivers
+   
+Technology is the dominant product category by sales, followed by office supplies. This analysis highlights Technology as the primary revenue generator for KMS, contributing the largest share of total sales. Office Supplies also play a significant role in the company's revenue stream. 
+ - Regional Sales Performance; Strategic Focus Areas
+
+The **West**, **Ontario** and **Prairie** regions lead in sales, while **Nunavut**, **Northwest Territories** and **Yukon** are the lowest performing regions. Geographic sales performance insights are crucial for resource allocation and the strong performance in the top three regions suggests these are areas with high demand, warranting continued investment. Conversely, the significantly lower sales in the bottom three regions identifies them as potential areas for strategic intervention like targeted marketing campaigns or even evaluating the efficiency of existing sales and distribution channels.
+ - Customer Segmentation and Value
+
+Identifying individual high-value customers (like **Emily Phan and Roy Skaria**) and understanding their purchasing habits and preferences (e.g. **Emily Phan's** strong inclination towards Office Supplies and Technology) is critical for personalized retention strategies. 
+ - Shipping and Logistics Efficiency
+
+Delivery Truck is the most expensive shipping method on average per line item, contrary to the typical assumption of it being "economical." Regular Air and Express Air have similar, lower average costs, but Express Air is considerably faster. The allocation of shipping methods based on order priority shows potential misalignment.
+For High and Critical priority orders, a significant volume still uses Regular Air despite Express Air being the fastest. This might imply a trade-off where KMS prioritizes cost savings over maximum speed for some urgent orders, or that Express Air is not consistently chosen when speed is paramount. Management should investigate the underlying reasons for the high average cost of Delivery Truck shipments and re-evaluate the allocation of shipping methods for high-priority orders to ensure optimal balance between delivery speed, customer satisfaction, and cost efficiency
+
+## ✅ Recommendations for KMS Management
+Based on this analysis, KMS management should consider the following actions:
+
+ 1. **Optimize Product Portfolio** :Deep dive into the profitability of Technology and Office Supplies and For lower-performing categories, evaluate if they should be de-emphasized, re-marketed, or if their pricing/cost structure needs adjustment.
+ 2. **Targeted Regional Growth**: Develop specific strategies for the **Nunavut, Yukon and Northwest Territories regions**.This could involve market research, localized marketing campaigns, or re-evaluating distribution channels to improve accessibility and demand.
+ 3. **Enhance Customer Loyalty**: Implement personalized retention strategies for the top-value customers. This could include exclusive offers, loyalty programs, or dedicated account management based on their identified product preferences.
+ 4. **Re-evaluate Shipping Strategy**: Revisit the allocation rules for Express Air and Regular Air for high-priority orders to ensure alignment between service level and cost, based on true business needs and customer expectations.
+ 5. **Address Return Root Causes**: Conduct a deeper analysis into returned items to identify common products, reasons for return, and associated costs. This could uncover issues related to product quality, descriptions, or packaging that need to be addressed to reduce return rates and improve customer satisfaction.
+
+## 💡 Key Takeaways
+ - Technology Drives Revenue: Technology is the clear leader in sales, making it a critical focus area for continued investment and strategic growth.
+ - Regional Disparities: While **'West',Ontario and Priarie** are strong performers, **Nunavut, Northwest Territories and Yukon** represent significant opportunities for targeted market development and resource allocation.
+ - High-Value Customer Focus: Identifying and nurturing high-value customers through personalized strategies is essential for maximizing customer lifetime value and fostering loyalty.
+ - Shipping Cost Optimization Needed: The high average cost of Delivery Truck shipments requires immediate investigation. Additionally, the current allocation of shipping methods for high-priority orders may not align with desired speed and efficiency.
+
